@@ -150,11 +150,10 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  image.alt='restaurant image';
+  image.alt="Image of "+`${restaurant.name} Restaurant`;
   image.setAttribute("role", "img");
   li.append(image);
-  //document.getElementByClassName('cuisines-select');
-  const name = document.createElement('h1');
+  const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
   li.append(name);
 
@@ -190,4 +189,3 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 
 }
-

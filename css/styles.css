@@ -105,10 +105,11 @@ nav h1 a {
 }
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
-  width: 100%;
   height: auto;
   background-color: #3397DB;
   align-items: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 .filter-options h2 {
   color: white;
@@ -182,58 +183,60 @@ nav h1 a {
 }
 
 @media screen and (max-width: 600px) {
-#restaurants-list li {
-  margin: 0 0 10px 0 ;
-  width: 75%;
-}
-#neighborhoods-select {
-  float: left;
-}
- #cuisines-select {
-  float: left;
-}
-.inside #map-container {
-  background: blue none repeat scroll 0 0;
-  height: 400px;
-  width: 100%;
-}
+  #restaurants-list li {
+    margin: 0 0 10px 0 ;
+    width: 75%;
+  }
+  #neighborhoods-select {
+    float: left;
+  }
+   #cuisines-select {
+    float: left;
+  }
+  .inside #map-container {
+    background: blue none repeat scroll 0 0;
+    height: 400px;
+    width: 100%;
+  }
+  .filter-options {
+  flex-direction: column;
+  }
+  #restaurant-container, #reviews-container {
+    padding: 30px 15px 60px;
+    width: 90%;
+    list-style: outside;
+  }
 
-#restaurant-container, #reviews-container {
-  padding: 30px 15px 60px;
-  width: 90%;
-  list-style: outside;
-}
-
-#reviews-container {
-  width: 80%;
-}
+  #reviews-container {
+    width: 80%;
+  }
 }
 
 @media screen and (min-width: 700px) {
-#restaurant-container, #reviews-container {
-  padding: 140px 40px 30px;
-  width: 50%;
-}
-#restaurants-list li {
-  margin: 15px ;
-  display: inline-table;
-}
-#restaurants-list{
-  display: table;
-}
-.inside #map-container {
-  background: blue none repeat scroll 0 0;
-  height: 87%;
-  position: fixed;
-  right: 0;
-  top: 80px;
-  width: 50%;
-}
-.inside #map {
-  background-color: #ccc;
-  height: 100%;
-  width: 100%;
-}
+  #restaurant-container, #reviews-container {
+    padding: 140px 40px 30px;
+    width: 45%;
+  }
+  #restaurants-list li {
+    margin: 15px ;
+    display: inline-table;
+  }
+  #restaurants-list{
+    display: table;
+  }
+  .inside #map-container {
+    background: blue none repeat scroll 0 0;
+    height: 83%;
+    position: fixed;
+    right: 0;
+    top: 80px;
+    width: 50%;
+  }
+  .inside #map {
+    background-color: #ccc;
+    height: 90%;
+    width: 100%;
+  }
 }
 /* ====================== Restaurant Details ====================== */
 
@@ -288,7 +291,7 @@ nav h1 a {
   border-top: 1px solid #fff;
 }
 #reviews-container {
-  padding: 30px 40px 80px;
+  padding: 30px 30px 80px;
 }
 #reviews-container h2 {
   color: #f58500;
@@ -318,4 +321,5 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+
 
